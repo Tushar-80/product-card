@@ -32,3 +32,9 @@ body {
     color: #333;
     margin: 10px 0;
 }
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
