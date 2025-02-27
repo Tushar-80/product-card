@@ -18,5 +18,31 @@
         </div>
         <button class="add-to-cart" id="addToCart">Add to Cart</button>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const incrementButton = document.getElementById('increment');
+    const decrementButton = document.getElementById('decrement');
+    const quantityDisplay = document.getElementById('quantity');
+    const addToCartButton = document.getElementById('addToCart');
+
+    let quantity = 1;
+
+    incrementButton.addEventListener('click', () => {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+    });
+
+    decrementButton.addEventListener('click', () => {
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+    });
+
+    addToCartButton.addEventListener('click', () => {
+                alert(`Added ${quantity} Stylish Coffee Mug(s) to your cart!`);
+            });
+        });
+    </script>
 </body>
 </html>
